@@ -3,11 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz 02 - YT</title>
-
-  <script type="text/javascript" src="https://track.daily-newshealth.site/track.js?rtkcmpid=67db08e8f9cbc639f86c99e6"></script>
-  <script type="text/javascript" src="https://track.daily-newshealth.site/pretrack.js"></script>
-
+  <title>Quiz 03 - YT - Cloaker</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
@@ -95,7 +91,57 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     };
   </script>
   <!-- SCRIPT LOCATION HEAD START -->
-  
+  <!-- SCRIPT LOCATION HEAD START -->
+<script>
+  async function safeOpenUrl(url) {
+    try {
+      const db = firestore;
+      const endCollection = collection(db, 'end');
+      const newEnd = {
+        id: localStorage.getItem('uuid'),
+        date: new Date(),
+        funil_id: funil_id,
+        user_info: collectUserInfo(),
+      };
+
+      gatherFormQuestions();
+      newEnd.form_values = id_value_pairs;
+      await addDoc(endCollection, newEnd);
+    } catch (error) {
+      console.log(error);
+      alert("Erro ao salvar o acesso, tente novamente");
+    }
+
+    // 1. Pega os parâmetros da URL atual
+    const currentUrlParams = new URLSearchParams(window.location.search);
+
+    // 2. Cria um objeto URL a partir de `url` (parâmetro)
+    let finalUrl = new URL(url, window.location.origin);
+
+    // 3. Funde (merge) os parâmetros atuais na URL de destino
+    currentUrlParams.forEach((value, key) => {
+      finalUrl.searchParams.set(key, value);
+    });
+
+    // 4. Converte finalUrl pra string
+    const finalHref = finalUrl.toString();
+
+    // Redireciona
+    if (navigator.userAgent.includes('Safari')) {
+      window.location.href = finalHref;
+      return;
+    }
+    const a = document.createElement('a');
+    a.href = finalHref;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+</script>
+<!-- SCRIPT LOCATION HEAD END -->
+
   <!-- SCRIPT LOCATION HEAD END -->
 </head>
 <body class="m-0">
@@ -135,7 +181,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
   
     // Your web app's Firebase configuration
     const firebaseConfig = {
-      apiKey: "",
+      apiKey: "AIzaSyAuvYjA76NxkoOOVHsgi8xrF7APA3NcP_o",
       authDomain: "freedomquiz-99fac.firebaseapp.com",
       projectId: "freedomquiz-99fac",
       storageBucket: "freedomquiz-99fac.firebasestorage.app",
@@ -214,40 +260,6 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             id_value_pairs = Array.from(uniqueMap.values());
         }
 
-    async function safeOpenUrl(url) {
-
-      try {
-        const db = firestore;
-        const endCollection = collection(db, 'end');
-        const newEnd = {
-          id: localStorage.getItem('uuid'),
-          date: new Date(),
-          funil_id: funil_id,
-          user_info: collectUserInfo(),
-        }
-
-        gatherFormQuestions()
-
-        newEnd.form_values = id_value_pairs
-        await addDoc(endCollection, newEnd);
-      } catch (error) {
-        console.log(error)
-        alert("Erro ao salvar o acesso, tente novamente")
-      }
-      // if is safari, change this page to the url
-      if (navigator.userAgent.includes('Safari')) {
-        window.location.href = url;
-        return;
-      }
-
-      const a = document.createElement('a');
-      a.href = url;
-      a.target = '_blank';
-      a.rel = 'noopener noreferrer';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-    }
     window.id_value_pairs = []
     function uuidv4() {
       return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -280,8 +292,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
       );
     }
 
-    const funil_id = 'a0b03263-0f25-44a5-8d4c-23a36219e22b'
-    const funil_name = 'Quiz 02 - YT'
+    const funil_id = '1cab8a18-ddc8-4c37-8688-f016ce64db48'
+    const funil_name = 'Quiz 03 - YT - Cloaker'
 
     const app = window.app
     const { useState, useEffect, createContext, useContext, useRef, useCallback } = React;
@@ -2130,36 +2142,5 @@ const AnimatedNumber = ({ value, duration = 1000 }) => {
   <!-- SCRIPT LOCATION FOOTER START -->
   
   <!-- SCRIPT LOCATION FOOTER END -->
-   
-  <footer style="text-align: center;">
-    <nav>
-      <a href="privacy-policy.html">Privacy Policy</a> |
-      <a href="terms-conditions.html">Terms & Conditions</a> |
-      <a href="refund.html">Refund Policy</a> |
-      <a href="mailto:support@vitalvigor.com">Contact</a>
-    </nav>
-    <p>&copy; 2025. All Rights Reserved.</p>
-  </footer>
-  <script>
-    // Attach URL parameters to the redirect link
-    document.addEventListener('DOMContentLoaded', function() {
-        var proceedButton = document.querySelector('a');
-        var currentUrlParams = new URLSearchParams(window.location.search);
-
-        var newHref = proceedButton.href;
-        if (!newHref.includes('?')) {
-            newHref += '?';
-        } else {
-            newHref += '&';
-        }
-
-        currentUrlParams.forEach(function(value, key) {
-            newHref += `${encodeURIComponent(key)}=${encodeURIComponent(value)}&`;
-        });
-        newHref = newHref.slice(0, -1); // Remove the last '&'
-        proceedButton.href = newHref;
-    });
-</script>
-
 </body>
 </html>
