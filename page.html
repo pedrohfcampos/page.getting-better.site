@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="https://track.onebetter-life.site/track.js"></script>
     <script type="text/javascript" src="https://track.onebetter-life.site/track.js?rtkcmpid=67f528b0f5906a41832bacf1"></script>
 
     <!-- TikTok Pixel Code Start -->
@@ -160,162 +159,147 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     } 
 </script>
 
-    <title>Page One</title>
+    <title>Latest News</title>
     <style>
-        /* Estilos básicos */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            background-color: #000000;
-        }
+      * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+      }
 
-        h1 {
-            font-size: 25px;
-            padding-inline: 20px;
-        }
+      body {
+          font-family: Arial, sans-serif;
+          font-size: 18px;
+          line-height: 1.6;
+          background-color: #f0f0f0; /* Soft light gray background */
+          color: #333;
+      }
 
-        header, footer {
-            background-color: #ffffff;
-            color: rgb(0, 0, 0);
-            text-align: center;
-            padding: 10px 0;
-        }
+      header {
+          background-color: #d7e3fc; /* Light blue */
+          color: #202020; /* Almost black for better readability */
+          padding: 20px 0;
+          text-align: center;
+      }
 
-        .timer {
-            font-family: Arial, sans-serif;
-            font-size: 22px;
-            margin: 10px 0 20px;
-            font-weight: bold;
-            text-align: center;
-            color: rgb(255, 255, 255);
-            padding-inline: 15px;
-            display: none;
-        }
+      header h1 {
+          font-size: 2rem;
+      }
 
-        .time {
-            color: red;
-        }
+      header p {
+          font-size: 1.2rem;
+          font-style: italic;
+      }
 
-        header {
-            background-color: #000000;
-        }
+      nav {
+          background-color: #b0bec5; /* Soft blue-gray */
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          padding: 10px 0;
+      }
 
-        main {
-            flex: 1;
-            padding-bottom: 35%;
-            padding-top: -5px;
-            display: flex;
-            flex-direction: column;
-            align-items: center !important;
-            justify-content: center;
-            background-color: #000000;
-        }
+      nav a {
+          color: #263238; /* Dark bluish-gray */
+          text-decoration: none;
+          font-weight: bold;
+      }
 
-        h1 {
-            font-size: 20px;
-            padding-inline: 20px;
-            font-weight: bold;
-            color: white;
-            text-shadow: 2px 2px 4px black;
-            background-color: #000000;
-        }
+      nav a:hover {
+          text-decoration: underline;
+      }
 
-        .oi {
-            color: red;
-        }
+      main {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 0 20px;
+      }
 
-        .container {
-            display: flex;
-            justify-content: center; /* Alinha horizontalmente ao centro */
-            align-items: center; /* Alinha verticalmente ao centro */
-            height: 100vh; /* Usa 100% da altura da viewport */
-        }
+      article {
+        background: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
 
-        .image-container {
-            display: flex !important;
-            justify-content: center; /* Alinha horizontalmente ao centro */
-        }
+      article h2 {
+        color: #072c59;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+        text-align: center;
+      }
 
-        button {
-            padding: 10px 20px; /* Adiciona um pouco de padding ao botão */
-            font-size: 16px; /* Aumenta um pouco o tamanho da fonte */
-            cursor: pointer; /* Muda o cursor para indicar que é clicável */
-            background-color: green;
-            border-color: green;
-        }
+      article p {
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
 
-        a {
-            text-decoration: none; /* Remove o sublinhado do link */
-            color: rgb(0, 0, 0);
-        }
+      .highlight {
+        font-weight: bold;
+        color: #cc0000;
+      }
 
-        img {
-            max-width: 100%;
-            padding-bottom: 50%;
-        }
+      .featured-image {
+          max-width: 100%;
+          height: auto;
+          display: block;
+          margin: 20px auto;
+      }
 
-        .rodape {
-            font-size: 8px;
-            padding-right: 10%;
-            padding-left: 10%;
-        }
+      .watch-video-btn {
+          background: #78909c; /* Blue-gray */
+          color: white;
+          padding: 10px 15px;
+          border-radius: 5px;
+          text-decoration: none;
+          font-weight: bold;
+          display: inline-block;
+          transition: background-color 0.3s;
+      }
 
-        .container-2 {
-            display: flex;
-            font-size: 5px;
-            justify-content: center; /* Centraliza horizontalmente */
-            align-items: center; /* Centraliza verticalmente */
-            height: 100px; /* Altura do container */
-        }
+      .watch-video-btn:hover {
+          background: #546e7a; /* Darker shade of blue-gray */
+      }
 
-        .footer-link {
-            flex: 1; /* Faz cada link ocupar o mesmo espaço */
-            text-align: center; /* Centraliza o texto dentro de cada bloco */
-            padding: 10px; /* Espaçamento interno para os links */
-            border-right: 1px solid rgb(255, 0, 0); /* Adiciona uma borda à direita */
-        }
+      footer {
+          background-color: #455a64; /* Dark gray-blue */
+          color: white;
+          font-size: 5px;
+          text-align: center;
+          padding: 20px;
+          margin-top: 20px;
+      }
 
-        .footer-link:last-child {
-            border-right: none; /* Remove a borda do último item */
-        }
+      footer p {
+          margin: 5px 0;
+      }
 
-        /* Estilos responsivos para Desktop */
-        @media (min-width: 768px) {
-            main {
-                flex-direction: row;
-                align-items: flex-start;
-                padding-top: 20px;
-            }
-            img {
-                max-width: 100%;
-                padding-bottom: 50%;
-            }
-            .rodape {
-                font-size: 10px;
-                padding-right: 20%;
-                padding-left: 20%;
-            }
-            .container {
-                padding-top: 30px;
-                padding-bottom: 50px;
-            }
-            p {
-                align-items: center;
-                text-align: center;
-                font-size: 20px;
-                padding-top: -15px;
-            }
-        }
-    </style>
+      .disclaimer {
+          font-size: 0.8em;
+          line-height: 1.4;
+      }
+  </style>
 </head>
 <body>
-    <main>
+
+  <header>
+    <h1>US Daily News</h1>
+    <p>Latest Health Updates</p>
+  </header>
+
+  <main>
+<article>
+        <h2>
+          Ѕ​р​е​с​і​а​l​і​ѕ​t​ ​R​е​v​е​а​l​ѕ​ <span class="highlight">​W​а​r​m​ ​W​а​t​е​r​ 
+          <br>​R​і​t​u​а​l</span>​ ​t​h​а​t​ <span class="highlight">​R​Е​V​Е​R​Ѕ​Е​Ѕ</span>​ <br>​t​у​р​е​ ​2​ ​d​і​а​b​е​t​е​ѕ​ 
+        </h2>
+        <p style="font-size: 0.7rem">
+          <strong>Publication Date:</strong> April 9, 2025
+        </p>
+
 <script type="text/javascript" id="scr_67fa5edf7066994f5aca03b4"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/dc2bee22-f6b3-41ae-b28c-3a61aaac8be4/ab-test/67fa5edf7066994f5aca03b4/player.js", s.async=!0,document.head.appendChild(s); </script>
     </main>
+    
     <footer>
         <div class="rodape">
             Copyright 2024. All rights reserved.
@@ -329,7 +313,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             <br><br>
             The author is not engaged in rendering medical or similar professional services or advice via this website, and the information provided is not intended to replace medical advice offered by a physician or other licensed health care provider.
         </div>  
-        <div class="container-2">
+        <div class="container-2" style="color: white;">
             <div class="footer-link"><a href="https://page.getting-better.site/privacy-policy-2/">PRIVACY POLICY</a></div>
             <div class="footer-link"><a href="https://page.getting-better.site/terms/">TERMS</a></div>
             <div class="footer-link"><a href="https://page.getting-better.site/page/">CONTACT</a></div>
